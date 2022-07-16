@@ -13,6 +13,5 @@ export const getCoreGameStats = async (matchId: string, token: Entitlement) => {
   const axios = getGlzAxios(token);
   const path = `/core-game/v1/matches/${matchId}`;
   const { data } = await axios.get(path);
-  console.log(data);
   return data;
 };
